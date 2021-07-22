@@ -13,7 +13,12 @@ npm run test
 #### Example
 
 ```js
-const Cache = require("cache")
+const Cache = require("./index.js")
+
+/* Construct a new cache can receive 2 params (limit, evictionManager)
+   manager: NoneEvictionManager, LRUEvictionManager, LFUEvictionManager
+   default manager is none
+*/
 const cache = new Cache(5)
 
 cache.set("key", "value")
